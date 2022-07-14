@@ -1,0 +1,95 @@
+<html lang="ko" color="light">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>프로그래밍대회 제출</title>
+
+        <link rel="stylesheet" type="text/css" href="https://ui.koderpark.dev/v1/css/main.css">
+        <link rel="stylesheet" type="text/css" href="https://ui.koderpark.dev/v1/css/color.css">
+        <link rel="stylesheet" type="text/css" href="https://ui.koderpark.dev/v1/bootstrap/min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+    <body class="lib-bg2 lib-font-medium d-flex justify-content-center align-items-center">
+        <div class="container-xl p-3">
+            <h1 class="mb-3">3학년 1반식 자리배치 프로그램</h1>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="lib-bg1 lib-shadow d-flex flex-column h-100 p-3">
+                        <div class="flex-grow-1 lib-bg2 p-3">
+                            1. 번호 뽑기 버튼을 누른다.</br>
+                            2. 뽑힌 번호 학생이 앉을 좌석을 선택한다.</br>
+                            3. 해당 좌석이 고정된다.</br>
+                            </br>
+                            번호 뽑기 버튼은 스페이스바로도<br/>누를 수 있습니다.
+                        </div>
+                        <h1 class="h0 mx-auto my-5 lib-bg2" id="display">X</h1>
+                        <button class="pickbtn lib-bg-rev mb-0" onclick="generateNumber()">번호 뽑기</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="lib-bg1 lib-shadow p-3">
+                        <div class="board lib-bg-rev">
+                            칠판
+                        </div>
+
+                        <div class="row">
+                            <div class="col-2">
+                                <div class="lib-bg2 seat"></div>
+                                <div class="lib-bg2 seat" onclick="clickseat(5)" id="s5">5</div>
+                                <div class="lib-bg2 seat" onclick="clickseat(11)" id="s11">11</div>
+                                <div class="lib-bg2 seat" onclick="clickseat(17)" id="s17">17</div>
+                                <div class="lib-bg2 seatlast"></div>
+                            </div>
+                            <div class="col-2">
+                                <div class="lib-bg2 seat" onclick="clickseat(1)" id="s1">1</div>
+                                <div class="lib-bg2 seat" onclick="clickseat(6)" id="s6">6</div>
+                                <div class="lib-bg2 seat" onclick="clickseat(12)" id="s12">12</div>
+                                <div class="lib-bg2 seat" onclick="clickseat(18)" id="s18">18</div>
+                                <div class="lib-bg2 seatlast" onclick="clickseat(23)" id="s23">23</div>
+                            </div>
+                            <div class="col-2">
+                                <div class="lib-bg2 seat" onclick="clickseat(2)" id="s2">2</div>
+                                <div class="lib-bg2 seat" onclick="clickseat(7)" id="s7">7</div>
+                                <div class="lib-bg2 seat" onclick="clickseat(13)" id="s13">13</div>
+                                <div class="lib-bg2 seat" onclick="clickseat(19)" id="s19">19</div>
+                                <div class="lib-bg2 seatlast" onclick="clickseat(24)" id="s24">24</div>
+                            </div>
+                            <div class="col-2">
+                                <div class="lib-bg2 seat" onclick="clickseat(3)" id="s3">3</div>
+                                <div class="lib-bg2 seat" onclick="clickseat(8)" id="s8">8</div>
+                                <div class="lib-bg2 seat" onclick="clickseat(14)" id="s14">14</div>
+                                <div class="lib-bg2 seat" onclick="clickseat(20)" id="s20">20</div>
+                                <div class="lib-bg2 seatlast" onclick="clickseat(25)" id="s25">25</div>
+                            </div>
+                            <div class="col-2">
+                                <div class="lib-bg2 seat" onclick="clickseat(4)" id="s4">4</div>
+                                <div class="lib-bg2 seat" onclick="clickseat(9)" id="s9">9</div>
+                                <div class="lib-bg2 seat" onclick="clickseat(15)" id="s15">15</div>
+                                <div class="lib-bg2 seat" onclick="clickseat(21)" id="s21">21</div>
+                                <div class="lib-bg2 seatlast" onclick="clickseat(26)" id="s26">26</div>
+                            </div>
+                            <div class="col-2">
+                                <div class="lib-bg2 seat"></div>
+                                <div class="lib-bg2 seat" onclick="clickseat(10)" id="s10">10</div>
+                                <div class="lib-bg2 seat" onclick="clickseat(16)" id="s16">16</div>
+                                <div class="lib-bg2 seat" onclick="clickseat(22)" id="s22">22</div>
+                                <div class="lib-bg2 seatlast"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    
+    <div id="color-changer" class="lib-bg1 lib-shadow">
+        <button id="color-light"></button>
+        <button id="color-dark"></button>
+    </div>
+    <script type="text/javascript" src="https://ui.koderpark.dev/v1/bootstrap/min.js"></script>
+    <script type="text/javascript" src="https://ui.koderpark.dev/v1/js/color.js"></script>
+    <script type="text/javascript" src="numbergen.js"></script>
+</html>
